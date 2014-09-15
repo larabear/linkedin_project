@@ -1,0 +1,8 @@
+README
+How to use:
+1. visit linkedin.lollabear.com, login using linkedin account, copy and paste all urls to a text file named "urlList.txt" in the main directory of linkedin_project
+2. install scrapy: pip install Scrapy
+3. go to linkedin_project/scrape/scrape/dmoz_spider.py, update line18 with your linkedin login info
+4. in the directory linkedin_project/scrape/scrape/spiders, run "scrapy runspider dmoz_spider.py", this will scrape emails from all your connections and store their email, name and company in a file called "emailList" in the main folder
+5. open linkedin_project/finalStep.py, update line 14 with your(sender's) email, line 15-17 with server info, and line 18 with message content
+6. in main folder, run "python finalStep.py company_name", where company_name is the name of the company, e.g: google. This will send customized emails to all connections from google.
